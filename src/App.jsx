@@ -7,20 +7,20 @@ function App() {
   const todos = useSelector(state => state.todos)
   const dispatch = useDispatch();
   
-  useEffect(() => {
-    const list = localStorage.getItem("todos")
-    if (list === "undefined" || null) {
-      return; }
-    else {
-      const todosList = JSON.parse(list)
-      todosList.map((todo) =>
-        dispatch(addTodo(todo)))
-    }
-  }, [])
+  // useEffect(() => {
+  //   const list = localStorage.getItem("todos")
+  //   if (list === "undefined" || null) {
+  //     return; }
+  //   else {
+  //     const todosList = JSON.parse(list)
+  //     todosList.map((todo) =>
+  //       dispatch(addTodo(todo)))
+  //   }
+  // }, [])
 
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))
-  },[todos])
+  // useEffect(() => {
+  //   localStorage.setItem('todos', JSON.stringify(todos))
+  // },[todos])
   
   return (
     <div className="bg-[#172842] min-h-screen py-8">
